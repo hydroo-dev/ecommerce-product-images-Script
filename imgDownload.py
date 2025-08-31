@@ -1,7 +1,7 @@
 import requests
 import os
 
-access_key = "ImJnGutQrnhFtZExcLyEKq-vj8KV_Bkt6olMI9Xdw4k"
+access_key = "MPUT_YOUR_OWN_API_KEY"
 query = "accessories"
 
 # Create folder using query name
@@ -16,3 +16,4 @@ for i, img in enumerate(response['results']):
     img_data = requests.get(img_url).content
     with open(f"{folder_name}/{folder_name}_{i+1}.jpg", "wb") as f:
         f.write(img_data)
+
